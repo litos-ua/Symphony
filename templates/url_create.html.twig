@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Додавання нового коду {% endblock %}
+
+{% block body %}
+
+
+    <br> Додайте URL для скорочення </br>
+    <br> </br>
+
+    <section>
+        <form action="{{ form_action }}" method="post">
+            <lable>Url для скорочення: <input type="text" name="url"></lable>
+            <button type="submit">Зберегти</button>
+        </form>
+    </section>
+
+
+
+
+{% endblock %}

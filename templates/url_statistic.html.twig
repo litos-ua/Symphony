@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Статистика переходів по коду {{ code }} {% endblock %}
+
+{% block body %}
+    <section>
+        <a href=" {{links.new_url }}">Додати нове скорочення</a>
+    </section>
+    <section>
+        <ul>
+            <li>Id: {{ url_info.id }}</li>
+            <li>Code: {{ url_info.code }}</li>
+            <li>Url: {{ url_info.url }}</li>
+            <li>Stat: {{url_info.counter }}</li>
+        </ul>
+    </section>
+
+    <iframe src="{{ url_info.url }}" frameborder="0"></iframe>
+
+
+
+{% endblock %}

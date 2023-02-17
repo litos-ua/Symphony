@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Статистика переходів по коду {{ code }} {% endblock %}
+
+{% block body %}
+
+         <section>
+             <br> Статистика переходів по коду {{ code }} <br>
+             <section>
+                 <ul>
+                     <li>Id: {{ url_info.id }}</li>
+                     <li>Code: {{ url_info.code }}</li>
+                     <li>Url: {{ url_info.url }}</li>
+                     <li>Stat: {{url_info.counter }}</li>
+                     <li>CreatedAt: {{ url_info.createdAt.format('d.m.Y H:i:s')  }}</li>
+                     <li>UpdatedAt: {{ url_info.updatedAt.format('d.m.Y H:i:s')  }}</li>
+                 </ul>
+             </section>
+
+         </section>
+
+    <iframe src="{{ url_info.url }}" frameborder="0"></iframe>
+
+{% endblock %}
